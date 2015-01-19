@@ -11,12 +11,12 @@ if ($(window).width() <= 1280) {
 }
 
 // Variables
-    tag1       = $('#js-label1'),
-    tag2       = $('#js-label2'),
-    tag3       = $('#js-label3'),
-    tag4       = $('#js-label4'),
-    tag5       = $('#js-label5'),
-    tag6       = $('#js-label6');
+    tag1       = $('.pl__all'),
+    tag2       = $('.machinelearning'),
+    tag3       = $('.bigdata'),
+    tag4       = $('.itbasic'),
+    tag5       = $('.tradition'),
+    tag6       = $('.life');
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
     content    = $('#pjax'),
@@ -26,7 +26,7 @@ var sidebar    = $('#sidebar'),
 var clickHandler = function(k) {
   return function() {
     $(this).addClass('active').siblings().removeClass('active');
-    //tag1.hide();
+    tag1.hide();
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
@@ -134,7 +134,7 @@ function afterPjax() {
   var ds_loaded = false,
       top = $('#disqus_thread').offset().top;
       identifier = $('#post__title').data('identifier');
-  window.disqus_shortname = 'cocoado\'s bf';
+  window.disqus_shortname = 'livingcode';
   window.disqus_identifier = identifier;
 
   function check() {
