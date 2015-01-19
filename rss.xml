@@ -1,0 +1,26 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>風月无边</title>
+    <link>kekeadou.github.io</link>
+    <atom:link href="kekeadou.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <description>kekeadou的技术博客</description>
+    <language>zh-cn</language>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+
+    {% for post in site.posts limit:10 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>kekeadou.github.io{{ post.url }}</link>
+      <pubDate>{{ post.date | date_to_string }}</pubDate>
+      <author>cocoado' bf</author>
+      <guid>kekeadou.github.io{{ post.id }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
