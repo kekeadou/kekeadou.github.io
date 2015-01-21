@@ -1,0 +1,14 @@
+---
+layout: post
+title: shell命令
+categories: itbasic
+date: 2015-1-22
+---
+
+##tail##
+tail -n 100 取文件最后一百行的数据，没有-n选项，则默认取最后10行。   
+tail -f 1.txt 取文件1.txt最后的数据，并且流式增量地获取，不会停止。  
+tail -n 0 -f 1.txt 不断去取最新添加到1.txt末尾的数据。   
+例子：   
+# ltail.py: 每隔两秒往1.txt里写入1行数据。   
+tail -n 0 -f 1.txt 可以不断取出最新数据。   
