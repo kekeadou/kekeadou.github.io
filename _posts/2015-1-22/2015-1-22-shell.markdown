@@ -1,7 +1,7 @@
 ---
 layout: post
 title: shell命令
-categories: itbasic
+categories: itbase
 date: 2015-1-22
 ---
 

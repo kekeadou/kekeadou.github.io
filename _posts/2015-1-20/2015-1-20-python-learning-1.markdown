@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2015-1-20
-categories: itbasic
+categories: itbase
 ---
 # python learning(一)
     >>> print bin(1024)

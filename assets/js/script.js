@@ -12,10 +12,10 @@ if ($(window).width() <= 1280) {
 
 // Variables
     tag1       = $('.pl__all'),
-    tag2       = $('.machinelearning'),
+    tag2       = $('.ml'),  //machinelearning
     tag3       = $('.bigdata'),
-    tag4       = $('.itbasic'),
-    tag5       = $('.tradition'),
+    tag4       = $('.itbase'),
+    tag5       = $('.tra'), //tradition
     tag6       = $('.life');
 var sidebar    = $('#sidebar'),
     container  = $('#post'),

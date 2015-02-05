@@ -4,10 +4,12 @@ categories: life
 ---
 
 # 这是一级标题
-这是二级标题
---------
-### 这是三级标题
-#### 这是四级标题
+
+## 这是二级标题 ##
+
+### 这是三级标题 ###
+
+#### 这是四级标题 ####
 
 ---
 *这是斜体*
@@ -21,7 +23,7 @@ categories: life
 2. 有序2
 3. 有序3
 
-[example link](http://www.baidu.com)
+[example link](http://www.baidu.com)   
 `jiandan`wenzi
 
 python:
