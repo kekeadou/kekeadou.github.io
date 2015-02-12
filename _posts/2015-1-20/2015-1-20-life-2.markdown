@@ -1,7 +1,0 @@
----
-layout: post
-title: 读KK的《失控》
-date: 2015-1-20
-categories: life
----
-This is the content.
