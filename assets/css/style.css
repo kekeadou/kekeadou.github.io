@@ -41,11 +41,23 @@ html, body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: auto;
+  /*border-bottom: 1px dashed Red;*/
+  /*padding: 1px;*/
   -webkit-transition: color .35s;
   -moz-transition: color .35s;
   -ms-transition: color .35s;
   -o-transition: color .35s;
   transition: color .35s; }
+
+img {
+    margin-left: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 /*---------------------------------*\
    Sidebar => Tags & Posts List
@@ -291,7 +303,7 @@ a {
   top: 65px;
   bottom: 0;
   left: 0;
-  right: -1px;
+  right: -8px;
   -webkit-overflow-scrolling: touch; }
   #pl__container::-webkit-scrollbar {
     width: 1px; }
@@ -392,23 +404,60 @@ a {
       max-width: 800px;
       margin: 0 auto; } }
 
-h2, h3, h4, h5, h6 {
-  font-weight: 400; }
-
 h1 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetia, STKaiti, Simsun, serif;
+  font-size: 2em;
   font-weight: 500; }
+
+h2 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetia, STKaiti, Simsun, serif;
+    font-size: 1.5em;
+    /*margin-bottom: 40px;*/
+    border-bottom: 2px LightGrey solid;
+    width: 90%;
+    line-height: 150%;
+    color: DarkGreen;
+}
+
+h3 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px LightGrey solid;
+    width: 80%;
+    line-height: 150%;
+    color: #2c353d;
+}
+
+h4 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px LightGrey solid;
+    width: 80%;
+    line-height: 150%;
+    color: #2c353d;
+}
+
 
 #post__title {
   margin: 0;
-  padding-top: 1.1em;
-  font-size: 1.5em; }
+  text-align: center;
+  font-weight: bold;
+  padding-top: 0.67em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-size: 2em; }
 
-#post__content > p, #post__content > ul, #post__content > ol {
+#post__content p, #post__content ul, #post__content ol {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetia, STKaiti, Simsun, serif;
   margin-top: 1em;
   margin-bottom: 1em; }
-#post__content > ol > li {
+#post__content ol li {
   margin: .5em 0; }
-#post__content li > p {
+#post__content li p {
   margin: 0; }
 #post__content a {
   color: #7d8b99;
@@ -425,9 +474,9 @@ strong {
   font-weight: 600; }
 
 blockquote {
-  margin: 1.5em 0 1.5em 2em;
-  padding-left: .5em;
-  border-left: 5px solid #e5e8ec; }
+  margin-left: 20px;
+  padding-left: 5px;
+  border-left: 4px solid lightgrey; }
 
 kbd {
   padding: .2em .3em .1em;
@@ -928,6 +977,22 @@ iframe {
   margin: 1.715em 0; }
 
 pre {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 95%;
+    border: solid 1px lightgrey;
+    background-color: Ivory;
+    padding: 5px;
+    line-height: 130%;
+    margin-left: 10px;
+    width: 95%;
+}
+
+code {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 100%;
+}
+/*
+pre {
   padding: 1em;
   font: .9em/1.5 Consolas, Monaco, 'Andale Mono', monospace;
   border: 1px solid #e5e8ec;
@@ -962,6 +1027,7 @@ pre > code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
+*/
 
 /* Inline code */
 :not(pre) > code {

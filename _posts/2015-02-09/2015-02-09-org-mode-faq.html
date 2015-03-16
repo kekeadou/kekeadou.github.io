@@ -1,31 +1,46 @@
 ---
 layout: post
-title: orgmode发布为html
+title: orgmode下发布为html时遇到的一些问题
 category: itbase
 tags: [orgmode, publish]
 ---
-<ol class="org-ol">
-<li>在调试orgmode发布为html时，按C-c C-e P p除了第一次生成了html文件，删除html文件后，怎么也不再生成。
-</li>
-</ol>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">问题1：</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-原因：orgmode有依据timestamp的cache，如果发现上次cache以后没有文件修改，则不会生成新的html文件。cache在~/.org-timestamps/目录下。
-解决方案：删除cache，或者修改下文件再保存，则可以重新生成新的html文件。
+在调试orgmode发布为html时，按C-c C-e P p除了第一次生成了html文件，删除html文件后，怎么也不再生成。<br  />
+原因：orgmode有依据timestamp的cache，如果发现上次cache以后没有文件修改，则不会生成新的html文件。cache在~/.org-timestamps/目录下。<br  />
+解决方案：删除cache，或者修改下文件再保存，则可以重新生成新的html文件。<br  />
 </p>
+</div>
+</div>
 
-<ol class="org-ol">
-<li>发布时，自动在正文的最开始生成了table of contents。如何删除？
-</li>
-</ol>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">问题2：</h2>
+<div class="outline-text-2" id="text-2">
 <p>
-解决方案：在~/.emacs里加入(setq org-export-with-toc nil)
-或者针对单个文件，加入：#+OPTIONS: toc:nil
+在发布时，自动在正文的最开始生成了table of contents。如何删除？<br  />
+解决方案：在~/.emacs里加入(setq org-export-with-toc nil)<br  />
+或者针对单个文件，加入：#+OPTIONS: toc:nil<br  />
 </p>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">问题3：</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+禁用下划线转义：类似于abc_def，def会变为abc的下标。<br  />
+解决方案：在OPTIONS里添加^:nil, 如下: #+OPTIONS: ^:nil<br  />
+</p>
+</div>
+</div>
 
-<ol class="org-ol">
-<li>禁用下划线转义：类似于abc_def，def会变为abc的下标。
-</li>
-</ol>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">问题4：</h2>
+<div class="outline-text-2" id="text-4">
 <p>
-解决方案：在OPTIONS里添加^:nil, 如下: #+OPTIONS: ^:nil
+在发布时，没有自动生成换行符，导致编辑的样式和生成的样式不一致，没有换行。<br  />
+解决方案：在OPTIONS里添加\n:t, 如下: #+OPTIONS: \n:t<br  />
 </p>
+</div>
+</div>
