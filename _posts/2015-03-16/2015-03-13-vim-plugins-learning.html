@@ -1,0 +1,76 @@
+---
+layout: post
+title: vim插件学习
+category: itbasic
+tags: []
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">emmet:</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+C+Y 为引导键。<br  />
+</p>
+
+<p>
+, 将css语法的选择器扩展为html文本。<br  />
+比如, div#page&gt;ul.foo*3，按下C+Y , 就会被扩展为：<br  />
+&lt;div id="page"&gt;<br  />
+    &lt;ul class="foo1"&gt;&lt;/ul&gt;<br  />
+    &lt;ul class="foo2"&gt;&lt;/ul&gt;<br  />
+    &lt;ul class="foo3"&gt;&lt;/ul&gt;<br  />
+&lt;/div&gt;<br  />
+</p>
+
+<p>
+还有一种用法，<br  />
+test1<br  />
+test2<br  />
+test3<br  />
+全选中以后，按下C+Y ,在命令栏会提示Tag：，输入ul&gt;li.foo*,会变为：<br  />
+&lt;ul&gt;<br  />
+    &lt;li class="foo1"&gt;test1&lt;/li&gt;<br  />
+    &lt;li class="foo2"&gt;test2&lt;/li&gt;<br  />
+    &lt;li class="foo3"&gt;test3&lt;/li&gt;<br  />
+&lt;/ul&gt;<br  />
+</p>
+
+<p>
+d 选中这个标签以及标签内的文本。<br  />
+</p>
+
+<p>
+n 移到下一个标签。<br  />
+</p>
+
+<p>
+N 移到上一个标签。<br  />
+</p>
+
+<p>
+i 改变img标签<br  />
+    &lt;img src="foo.png" &gt;<br  />
+</p>
+
+<p>
+j 分割标签，或者合并标签<br  />
+&lt;div class="foo"&gt;&lt;/div&gt;<br  />
+&lt;div class="foo"/&gt;<br  />
+</p>
+
+<p>
+/ 注释标签<br  />
+</p>
+
+<p>
+c code pretty<br  />
+&lt;p&gt;Writing in C language&lt;/p&gt;<br  />
+</p>
+
+<p>
+int main(){<br  />
+    puts('hello, world');<br  />
+}<br  />
+</p>
+</div>
+</div>

@@ -5,36 +5,18 @@ category: itbase
 tags: [git]
 ---
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> git的使用</h2>
+<h2 id="sec-1">git的配置</h2>
 <div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>git的配置
-git提供了一个git config的工具，专门用来配置或读写相应的工作环境变量。而正是这些环境变量，
-</li>
-</ul>
 <p>
-决定了git的具体工作方式和行为。这些变量可以存在三个不同的地方：
+git提供了一个git config的工具，专门用来配置或读写相应的工作环境变量。而正是这些环境变量，决定了git的具体工作方式和行为。这些变量可以存在三个不同的地方：<br  />
 </p>
 <ul class="org-ul">
-<li>/etc/gitconfig文件：系统中对所有用户都普遍适用的配置。若使用git config时用&#x2013;system选项，
+<li>/etc/gitconfig文件：系统中对所有用户都普遍适用的配置。若使用git config时用&#x2013;system选项，读写的就是这个文件。<br  />
+</li>
+<li>~/gitconfig文件：用户目录下的配置文件只适用于该用户。若使用git config时用&#x2013;global选项，读写的就是这个文件。<br  />
+</li>
+<li>当前项目的git目录中的配置文件：这里的配置仅仅针对当前项目有效。每一个级别的配置都会覆盖上一层的相同配置。所以.git/config里的配置会覆盖/etc/gitconfig中的同名变量。<br  />
 </li>
 </ul>
-<p>
-读写的就是这个文件。
-</p>
-<ul class="org-ul">
-<li>~/gitconfig文件：用户目录下的配置文件只适用于该用户。若使用git config时用&#x2013;global选项，
-</li>
-</ul>
-<p>
-读写的就是这个文件。
-</p>
-<ul class="org-ul">
-<li>当前项目的git目录中的配置文件：这里的配置仅仅针对当前项目有效。每一个级别的配置都
-</li>
-</ul>
-<p>
-会覆盖上一层的相同配置。所以.git/config里的配置会覆盖/etc/gitconfig中的同名变量。
-</p>
 </div>
 </div>

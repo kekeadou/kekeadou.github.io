@@ -1,0 +1,16 @@
+---
+layout: post
+title: 数据库学习
+category: itbase
+tags: [python, db, mysql]
+---
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">问题1：</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+中文字符存入mysql总是失败，数据库和表的字符集设置都是utf8。<br  />
+解决方案：数据库连接的编码需要设置。本例中使用的是DB_URI连接符，要在其<br  />
+后加上?use_unicode=0。之后可正确存入。<br  />
+</p>
+</div>
+</div>

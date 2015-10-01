@@ -1,0 +1,111 @@
+---
+layout: post
+title: LaTex模板写USTC毕业论文
+category: life
+tags: [ustc, latex]
+---
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">快速入门：利用LaTeX模板完成USTC毕业论文(转)</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+作者 :  钱曦D5457<br  />
+<code>========2014年5月12日更新=========</code><br  />
+自2014年3月起，勤劳的ywg网友发布了新版本硕博通用模板，之前的模板（包括本文中所描述的）已经停止支持。据作者介绍，新模板在TeXLive2013环境下测试通过。<br  />
+新模板的地址为<a href="https://code.google.com/p/ustcthesis/">https://code.google.com/p/ustcthesis/</a> （由于google禁止上传压缩包，所以大家只能通过“source”页面-》选择“default” repository-》点击“browse”-》download “zip”来下载最新的模板。 ）<br  />
+备用托管地址<a href="https://gitlab.lug.ustc.edu.cn/ywg/ustcthesis">https://gitlab.lug.ustc.edu.cn/ywg/ustcthesis</a><br  />
+于是，本文内容已经过时。建议读者按最新模板中提供的说明文件进行操作，本文仅供参考。<br  />
+如果你执着于老模板，可以继续按照本文中所说的流程进行。为此，可以在百度网盘下载本文中所用到的模板：<a href="http://pan.baidu.com/s/1sj2ji6D">http://pan.baidu.com/s/1sj2ji6D</a> 。关于WinEdt打开tex文件出错，请参考正文第5步。<br  />
+<code>============更新毕==============</code><br  />
+</p>
+
+<p>
+#本文只适用于中国科学技术大学本科毕业论文。考虑到他校同学可能有类似的需求，我在《国内外知名大学论文LaTeX模板集锦》这篇日志中找到了一些学校的模板，未经验证，不保证可用。#<br  />
+#本文只适用于Windows，如果你使用其他系统，相信你可以自己找到解决方案。#<br  />
+#对科大的同学： @石守谦(331502645) 同学曾经发布过Word的模板，链接为<a href="http://pan.baidu.com/share/link?shareid=2938240524&uk=372351097">http://pan.baidu.com/share/link?shareid=2938240524&uk=372351097</a> 如果此链接失效，可以尝试联系石同学。#<br  />
+Q: LaTeX和Word哪个好？<br  />
+A: 至少对于本科毕业论文来说，它俩都已经足够好了。<br  />
+Q: 从来没用过LaTeX，很难么？<br  />
+A: 在历辈网友的努力下，USTC毕业论文模板有一个非常实用的文档，只要看了文档，保证你会用。<br  />
+Q: 为什么有些人用Word做的论文好丑？<br  />
+A: 不是Word不好，是他们根本不会用（或者懒得做）……<br  />
+Q: 我应该用Word还是LaTeX？<br  />
+A: 如果你一看见代码就要晕过去，就用Word吧。如果你对Word“引用”菜单下的各个选项都很熟悉的话，你也可以继续用Word。如果你的论文有很多公式，LaTeX可以解放你操作鼠标的手。如果你什么都不会，又对美观有很高要求，就学LaTeX吧。如果你什么都不会，而且连学都懒得学，就用Word的吧，至少打进去的字是能直接看得到的。<br  />
+Q: 你当初用的什么？为什么呢？<br  />
+A: LaTeX，因为我又懒又想让论文好看。Word里那些排格式、做引用的东西看上去好麻烦的样子。而LaTeX，照着现成的文档一步步做就行了。<br  />
+Q: 如何优雅地使用Word？<br  />
+A: 看这里：<a href="http://www.zhihu.com/question/20541531">http://www.zhihu.com/question/20541531</a><br  />
+Q: 我用LaTeX做了论文，老师会不会不方便看？<br  />
+A: 最后生成的是pdf文件，审阅还是挺方便的。而且，科大的老师们，还有不会用LaTeX的么？<br  />
+Q: 我决定用LaTeX了，我应该怎么开始？<br  />
+A: 看完本文就可以开始了。<br  />
+</p>
+
+<p>
+<code>=============正文的分割线==============</code><br  />
+</p>
+
+<p>
+0.安装pdf阅读器<br  />
+这个大家电脑上应该都有吧。没有的赶紧装，比如福昕阅读器。（科大的同学应该有正版的福昕套装可以装吧？）<br  />
+1.安装CTeX<br  />
+到 <a href="http://www.ctex.org/CTeXDownload">http://www.ctex.org/CTeXDownload</a> 下载CTeX套装，下完以后一路下一步安装就行。下Basic版还是完整版随意，因为Basic版会根据需要自动升级。如果选择Basic版，第一次编译的时候建议保持联网状态，以便其升级。<br  />
+2.文本编辑器<br  />
+CTeX套装包含了WinEdt编辑器，可以直接在里面写代码了，然后点点按钮就可以编译，很方便的。如果你有自己喜欢的编辑器，比如Vim，也可以按自己的习惯用。注意文本应以UTF-8保存。<br  />
+3.下载论文模板<br  />
+到 <a href="https://code.google.com/p/ustcthesis/">https://code.google.com/p/ustcthesis/</a> ，点击Downloads ，在Search中选择All downloads，搜索USTC<sub>Thesis</sub><sub>Bachelor</sub><sub>20120511，然后点Search。（为了方便，提供百度网盘备份：http</sub>://pan.baidu.com/s/1sj2ji6D）下载解压后，会有这样几个文件夹和文件：<br  />
+【bib】文件夹，内有【tex.bib】，以后参考文献就写在这个文件里。<br  />
+【chapter】文件夹，内有一堆【*.tex】，以后论文从摘要开始的正文就都写在这个文件夹里，建议每章分一个文件。<br  />
+【figures】文件夹，内有很多图片，以后论文中的图片就都放在这个文件夹里。<br  />
+【geometry.sty】【ustcthesis.cls】，放着就行不用管。如果你想自己修改模板的话可以动手修改。<br  />
+【clean.bat】【make.bat】批处理文件。写完论文以后，双击make.bat，就会自动生成pdf文件了。感兴趣的话可以用文本编辑器打开看看里面写了什么。<br  />
+【main.tex】， 主文件啦，打开看看，你要写的tex文件大概就长这样。<br  />
+【Readme.pdf】，说明书诶，你想看的东西里面都有。<br  />
+4.尝试编译你的第一篇文章<br  />
+现在你已经安装好了CTeX，并且解压了模板。这时候什么都别改，直接双击【make.bat】，等着命令们飞过以后，就会出现一个main.pdf。如果失败了，回去检查一下上面哪步有问题。这个【main.pdf】其实和【Readme.pdf】内容是一样的。Readme中有个bug，参考文献没显示出来，而main.pdf是完整的。这样，可以把Readme删掉了。<br  />
+5.开始写自己的论文<br  />
+把整个模板文件夹复制一份，方便自己修改过以后能回来看看原始的文件。用WinEdt打开utf-8的文件可能会遇到问题，解决方法是，先打开WinEdt，然后在菜单栏File-Open，弹出的对话框“文件名”右边的编码选择“UTF-8”，然后选择要打开的文件（比如main.tex），按“打开”。如果你用别的编辑器的话，请自行判断可能出现的情况。<br  />
+5.1修改main.tex<br  />
+5.1.1首先按上面说的打开【main.tex】，修改从【\title】到【\entime】中的内容，注意文字中的“\ ”表示空格。（更多关于空格的知识请参考Readme）<br  />
+5.1.2然后【\makecover】【\maketitile】【\makesparatetitle】这三个留着，分别什么意思可以看Readme的几个扉页。<br  />
+5.1.3致谢、目录、摘要这三个保留，内容直接到相应的文件中改。<br  />
+5.1.4正文部分，你打算写几章这里就写几个【\include{chapter/...}】。每一章分别写在一个tex文件中，方便查bug。万一出现bug可以方便地把别的章注释掉，一步一步排除。要注释的话，在行首写一个%就行。<br  />
+5.1.5参考文献，不用改，把你需要的参考文献以bibtex的格式写在之前提过的【tex.bib】文件中，最终会自动生成你的参考文献。<br  />
+5.1.6附录。如果不需要附录，把这段都注释掉。如果需要多个附录，自己在这里添加【\include{chapter/...}】<br  />
+5.2修改致谢<br  />
+在【thanks.tex】中修改。如果就一段话的话，可以直接写在【\begin{thankspage}】和【\end{thankspage}】中就算完事。如果有多段的话，用"\\"分行，自己按需要写上各种格式对应的命令。<br  />
+5.3修改摘要<br  />
+在【abstract.tex】中修改。中英文分别写在上面和下面，关键词写在keywords里面。<br  />
+5.4写正文和附录<br  />
+5.4.1在动手写正文之前，请读完Readme。在写作过程中需要什么命令可以到Readme查。Readme中没有的可以自己Google。需要引用时，参考Readme中【参考文献的使用】这一章中提到的引用方式。需要交叉引用（比如“见图5.1”、“在第二章中”这些情况）时，见【图形】这一章中提到的交叉引用。<br  />
+5.4.2开始写作正文时，可以把模板中除了thanks.tex、abstract.tex以外的.tex文件都删掉，按自己的需要新建文件。每一章开头应该为：<br  />
+\chapter{blablabla}<br  />
+\label{blablabla}（这是为了方便交叉引用）<br  />
+然后就可以\section{} \subsection{} \subsubsection{}下去了。<br  />
+5.5写参考文献<br  />
+参考Readme中【参考文献的使用】这一章，把文献以BibTeX格式写进【tex.bib】。对于天文的同学，ads中可以直接找到文献的BibTeX格式。关于BibTeX的更多知识，参见 <a href="http://en.wikipedia.org/wiki/BibTeX">http://en.wikipedia.org/wiki/BibTeX</a><br  />
+6.编译<br  />
+写完正文以后，把相应的文件名\include到main.tex中，然后双击make.bat。如果出现问题，请根据提示回到源文件中检查。<br  />
+7.写完论文了<br  />
+仔细阅读成稿，避免笔误。注意引用和交叉引用是否全部正确，这里引错了不一定会报错。以及，千万不要模板中的论文题目都没改就拿去印了……<br  />
+8.打印装订<br  />
+在毕业季，跟着大伙一起去印刷制本厂打印吧。每人大概可以免费印三本，想多印的话可以自己出钱加印。<br  />
+</p>
+
+<p>
+<code>=============正文的分割线==============</code><br  />
+</p>
+
+<p>
+Q: 我在使用LaTeX中遇到困难了怎么办？<br  />
+A: 问Google，你遇到的困难，别人往往也会遇到，所以多看看别人的经验。此外，还可以到瀚海星云的TeX版提问。<br  />
+Q: 这个模板符合教务处的毕业论文格式要求么？<br  />
+A: 可能会有轻微的不符合，但是你绝对不会因为使用本模板而毕不了业的！（我们都毕业那么多年了……）<br  />
+Q: LaTeX还可以做什么？<br  />
+A: 与排版相关的都可以做呀。不妨试试用它做CV吧，一个常用的模板（morderncv）在这里 <a href="https://launchpad.net/moderncv">https://launchpad.net/moderncv</a><br  />
+</p>
+
+<p>
+致谢：瀚海网友XPS等<br  />
+</p>
+</div>
+</div>
